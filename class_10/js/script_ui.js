@@ -5,6 +5,10 @@ $(function(){
     .done(function(){ //모든 이미지 로드가 완료되는 시점에 발생하는 이벤트
         setTimeout(function(){
             $(".preload-wrap").addClass("complete");
+            setTimeout(function(){
+                $(".preload-wrap").remove();
+            },700);
+            init();
         },1000)
         
     })
